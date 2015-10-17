@@ -6,10 +6,12 @@ var Ttt = {
   start_player: 'o',
   current: 'x',
 
+  // curernt user takes a move on a board
   play: function(x,y) {
     Ttt.moves[x][y] = Ttt.current;
   },
 
+  // do we have a winner? resolved after each move
   we_have_a_winner: function() {
     var i, j, k, player, players = ['x','o'], t=Ttt.moves;
 
@@ -24,18 +26,19 @@ var Ttt = {
         if (t[i][0] == player && t[i][1] == player && t[i][2] == player) {
           return player;
         }
+      }
 
-        // diagonal wins
-        if (t[0][0] == player && t[1][1] == player && t[2][2] == player) {
-          return player;
-        }
-        if (t[0][2] == player && t[1][1] == player && t[2][0] == player) {
-          return player;
-        }
+      // diagonal wins
+      if (t[0][0] == player && t[1][1] == player && t[2][2] == player) {
+        return player;
+      }
+      if (t[0][2] == player && t[1][1] == player && t[2][0] == player) {
+        return player;
       }
     }
   },
 
+  // make a move, if able
   move: function(el) {
     var node = $(el.target), winner;
     var position = node.attr('id').split('-').map(function(o) { return parseInt(o); }); position.shift();
@@ -67,6 +70,7 @@ var Ttt = {
     Ttt.current = Ttt.current == 'x' ? 'o' : 'x';
   },
 
+  // reset dinamic variables and a board
   reset: function() {
     var i,j;
 
@@ -78,10 +82,13 @@ var Ttt = {
     // reset vars
     this.moves = [[],[],[]];
     this.move_count = 0;
+
+    // start player changes every turn
     this.start_player = this.start_player == 'x' ? 'o' : 'x';
     this.current = this.start_player;
 
-    // reset board
+    // reset board. this could easiliy be done with data bindings
+    // but this works just fine for a demo
     for (i=0;i<3;i++) {
       for (j=0;j<3;j++) {
         $('#ttt-'+i+'-'+j).html('');
@@ -90,7 +97,7 @@ var Ttt = {
   }
 }
 
-
+// application definition
 var App = {
   player_x: m.prop('Player X'),
   player_o: m.prop('Player O'),

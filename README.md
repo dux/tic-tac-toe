@@ -1,4 +1,4 @@
-# shore.com - tic-tac-toe demo
+# Tic tac toe demo
 
 ## client side of the demo
 
@@ -6,13 +6,13 @@
 
 http://mithril.js.org/
 
-I chose to create frontend with Mithril. I like it very much because it does very well
+Frontend with Mithril. It does very well
 * two-way data binding
 * routing
 * controler-view rendering
 
-it is simple and extremly efective amd allowes you to create mini FW implementation
-on top of qulity made basic easily.
+Simple and extremly efective.
+
 
 ### Pre-processors
 
@@ -31,7 +31,7 @@ bundle install
 puma -p 3000 (or whatewer that reads config.ru)
 
 
-## resources I used
+## resources Used
 
 http://jsbin.com/pasucaxuji/edit?html,css,output
 http://recipes.sinatrarb.com/p/models/data_mapper
