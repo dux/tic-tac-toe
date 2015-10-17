@@ -1,0 +1,104 @@
+div {
+  box-sizing: border-box;
+}
+
+.row > div {
+  /* background-color: skyblue; */
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.br {
+  margin: 20px 0;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+.row {
+  display: flex;
+  margin-right: -20px;
+  flex-direction: row;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.col-1 {
+  flex: 1;
+}
+
+.col-2 {
+  flex: 2;
+}
+
+.col-3 {
+  flex: 3;
+}
+
+.col-4 {
+  flex: 4;
+}
+
+.col-5 {
+  flex: 5;
+}
+
+.col-6 {
+  flex: 6;
+}
+
+.col-200 {
+  flex: 0 0 200px;
+}
+
+.col-250 {
+  flex: 0 0 250px;
+}
+
+.col-300 {
+  flex: 0 0 300px;
+}
+
+.col-350 {
+  flex: 0 0 350px;
+}
+
+.col-400 {
+  flex: 0 0 400px;
+}
+
+.col-450 {
+  flex: 0 0 450px;
+}
+
+.col-500 {
+  flex: 0 0 500px;
+}
+
+body.mobile .container {
+  max-width: none;
+  margin: 0;
+}
+body.mobile .row {
+  flex-direction: column;
+}
+body.mobile .row .mobile-hide {
+  display: none;
+}
+body.mobile .row > div {
+  margin-bottom: 10px;
+  flex: none;
+}
+body.mobile .mobile-order-1 {
+  order: 1;
+}
+body.mobile .mobile-order-2 {
+  order: 2;
+}
+body.mobile .mobile-order-3 {
+  order: 3;
+}

@@ -1,0 +1,78 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {  margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* APP */
+
+/* custom hand coded css for this case, so horizontal styles for better readability */
+
+body {
+  font-family: Helvetica, Arial;
+}
+
+b, strong { font-weight:bold; }
+
+h1 { font-size:165%; }
+h2 { font-size:150%; }
+h3 { font-size:135%; }
+h4 { font-size:120%; margin: 20pt 0 15pt 0; padding-bottom:8px; border-bottom: 1px solid #ddd; }
+h5 { font-size:110%; margin: 20px 0 6pt 0; }
+
+a, label, button { cursor:pointer; }
+
+label { display:block; padding:5px; }
+label span { padding-left:5px; position:relative; top:2px; }
+
+p { background-color: #FEE; padding:5px; }
+
+small { font-size:70%; }
+
+.nav {
+  background-color: #eee; padding:10px; border-bottom:1px solid #ddd;
+  margin-bottom:20px;
+}
+.nav a { text-decoration: none; color:#333;  }
+.nav a:hover { text-decoration: underline; }
+.nav .support { float:right; margin-top:5pt; }
+
+button { padding:7px 10px; background:#eee; border:1px solid #ccc; }
+button:focus { outline:none; }
+button.filter { float:right; border-radius: 4px; margin-top:-50px; padding:5px 10px; }
+
+form { display: block; }
+input[type=text] { padding:5px; width:92%; font-size: 12pt; display: block; }
+
+#info-container { z-index:6;  width:70%; position:fixed; top:70px; right:10px; width:250px; }
+#info-container .info-alert { padding:12px; color:#333; border-radius: 4px; margin-bottom:15px; }
+#info-container .info-alert.info-ok { background-color:#080; color:#fff; border:1px solid #070; }
+#info-container .info-alert.info-error { background-color:#800; color:#fff; border:1px solid #700;  }
+
+.tic-tac-toe .row div { margin:0; text-align:center; height:220px; }
+.tic-tac-toe .row:nth-child(2) div { border: 2px solid #ccc; border-left:0; border-right:0; }
+.tic-tac-toe .row div:nth-child(2) { border: 2px solid #ccc; border-top:0; border-bottom:0; }
+.tic-tac-toe .row:nth-child(2) div:nth-child(2) { border: 2px solid #ccc; }
+
+.blck.empty { }
+
+table { table-layout: fixed; width:100%; border:1px solid #ddd; margin-bottom: 10px; }
+table td { width:33%; text-align:center; height:40px; padding:10px;}
+
+.el-x { width: 40px; height: 40px; position: relative; left:-50%; transform:rotate(0deg); }
+.el-x:before, .el-x:after { content: ""; position: absolute; z-index: -1; background: #d00; }
+.el-x:before { left: 100%; width: 30%; margin-left: -15%; height: 100%; }
+.el-x:after { top: 50%; height: 30%; margin-top: -15%; width: 100%; }
+
+.el-o { width:40px; height:40px; border: 10px solid #080; border-radius: 20px; }

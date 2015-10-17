@@ -1,0 +1,23 @@
+!!! HTML
+%html
+  %head
+    %title Tic Tac Toe
+    %link{ rel:'stylesheet', href:'/css/grid.css' }
+    %link{ rel:'stylesheet', href:'/css/app.css' }
+    %script{ src:'/lib/zepto.min.js' }
+    %script{ src:'/lib/mithril.min.js' }
+    %script{ src:'/js/utils.js' }
+  %body
+    .nav
+      .container
+        .row
+          .col-1
+            %h1
+              Tic tac toe
+              %small &bull; single page app demo
+
+    #app.container app loading ...
+
+
+    %script{ src:'/js/app.js' }
+    %script{ src:'/js/views.js' }
