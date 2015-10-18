@@ -18,10 +18,12 @@ Simple and extremly efective.
 
 No usage of any pre-processors as SASS or CoffeeScript or TypeScript. 
 
+That is the reason JS in public/js
+
 
 ## OR backend DB mapper
 
-DataMaper, easier to get it working in Sinatra then AR
+DataMaper, cleaner to get it working in Sinatra then AR
 
 
 ## Install
@@ -33,13 +35,22 @@ DataMaper, easier to get it working in Sinatra then AR
 
 ## Testing
 
+### Continuous Integration - CI
+
+Travis
+
+https://travis-ci.org/dux/tic-tac-toe
+
+[![Build Status](https://travis-ci.org/dux/tic-tac-toe.svg?branch=master)](https://travis-ci.org/dux/tic-tac-toe)
+
 ### ruby
 
     rspec spec
 
 ### javascript
 
-    node-jasmine spec
+    node-jasmine spec // not implemente
+
 
 ## Security
 
@@ -55,3 +66,4 @@ There is no security whatsoever
 * http://datamapper.org/
 * http://rspec.info/
 * https://github.com/mhevery/jasmine-node
+* https://travis-ci.org/

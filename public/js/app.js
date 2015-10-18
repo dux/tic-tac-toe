@@ -13,7 +13,7 @@ var Ttt = {
 
   // do we have a winner? resolved after each move
   we_have_a_winner: function() {
-    var i, j, k, player, players = ['x','o'], t=Ttt.moves;
+    var i, player, players = ['x','o'], t=Ttt.moves;
 
     while(player = players.shift()) {
       for (i=0; i<3; i++) {

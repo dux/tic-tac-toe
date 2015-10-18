@@ -7,4 +7,4 @@ install:
   - bundle install
 
 script:
-  - xvfb-run rspec
+  - xvfb-run bundle exec rspec

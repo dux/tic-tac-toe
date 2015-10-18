@@ -1,24 +1,24 @@
 // single view-controler
-var IndexPage = {
-  controller: function() {},
-  view: function() {
+var ViewTemplate = {
+
+  mount: function(t) {
+    m.mount(document.getElementById('app'), { view: ViewTemplate[t] });
+  },
+
+  index: function() {
     return m('.row', [
       m('.col-1', [
         m('h2', 'Game, player on a move: '+App['player_'+Ttt.current]()),
         m('br'),
         m('br'),
         m('.tic-tac-toe', 
-          (function(){
-            var ret=[], i;
-            for (i=0; i<3; i++) { 
-              ret.push(m('.row', [
-                m('.col-1#ttt-'+i+'-0', { onclick:Ttt.move }, '.'),
-                m('.col-1#ttt-'+i+'-1', { onclick:Ttt.move }, '.'),
-                m('.col-1#ttt-'+i+'-2', { onclick:Ttt.move }, '.'),
-              ]));
-            }
-            return ret;
-          })()
+          [0,1,2].map(function(i){
+            return m('.row', 
+              [0,1,2].map(function(j){
+                return m('.col-1#ttt-'+i+'-'+j, { onclick:Ttt.move }, '');
+              })
+            );
+          })
         )
       ]),
       m('div.col-200', [
@@ -33,18 +33,18 @@ var IndexPage = {
         m('#history', App.render_history()),
       ])
     ]);
+  },
+  
+  leaderboard: function() {
+    return m('h1', 'adasdasdas');
   }
-}
 
-var LeaderboardPage = {
-  controller: function() {},
-  view: function() {
-
-  }
 }
 
 // mount the app
-m.mount(document.getElementById('app'), IndexPage);
+ViewTemplate.mount('index');
+setTimeout(function(){ ViewTemplate.mount('leaderboard'); }, 1000);
+setTimeout(function(){ ViewTemplate.mount('index'); }, 2000);
 
 // init app
 Ttt.init();
