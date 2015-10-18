@@ -13,6 +13,7 @@ gem 'json'
 gem 'haml'
 gem 'colorize'
 gem 'sqlite3'
+gem 'rspec'
 
 if ENV['RACK_ENV'] != 'production'
   gem 'awesome_print'
