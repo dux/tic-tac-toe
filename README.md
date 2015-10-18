@@ -21,18 +21,37 @@ No usage of any pre-processors as SASS or CoffeeScript or TypeScript.
 
 ## OR backend DB mapper
 
-DataMaper becuase it is easier to get it working in Sinatra
+DataMaper, easier to get it working in Sinatra then AR
 
 
-## install
+## Install
 
-bundle install
+    bundle install
 
-puma -p 3000 (or whatewer that reads config.ru)
+    puma -p 3000 (or whatewer that reads config.ru)
 
 
-## resources Used
+## Testing
 
-http://jsbin.com/pasucaxuji/edit?html,css,output
-http://recipes.sinatrarb.com/p/models/data_mapper
-http://rspec.info/
+### ruby
+
+    rspec spec
+
+### javascript
+
+    node-jasmine spec
+
+## Security
+
+There is no security whatsoever
+* GET insted of POST
+* no checks for data consistency
+
+
+## Resources used
+
+* http://www.sinatrarb.com/
+* http://mithril.js.org/
+* http://datamapper.org/
+* http://rspec.info/
+* https://github.com/mhevery/jasmine-node

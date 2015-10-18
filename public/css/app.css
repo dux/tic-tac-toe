@@ -65,14 +65,16 @@ input[type=text] { padding:5px; width:92%; font-size: 12pt; display: block; }
 .tic-tac-toe .row div:nth-child(2) { border: 2px solid #ccc; border-top:0; border-bottom:0; }
 .tic-tac-toe .row:nth-child(2) div:nth-child(2) { border: 2px solid #ccc; }
 
-.blck.empty { }
-
 table { table-layout: fixed; width:100%; border:1px solid #ddd; margin-bottom: 10px; }
 table td { width:33%; text-align:center; height:40px; padding:10px;}
 
-.el-x { width: 40px; height: 40px; position: relative; left:-50%; transform:rotate(0deg); }
+/* not a perfect soution, breaks on mobile ..., but works! */
+.el-x { display:block; width: 40px; height: 40px; position: relative; left:-15px; top:-15px; transform:rotate(45deg); }
 .el-x:before, .el-x:after { content: ""; position: absolute; z-index: -1; background: #d00; }
-.el-x:before { left: 100%; width: 30%; margin-left: -15%; height: 100%; }
-.el-x:after { top: 50%; height: 30%; margin-top: -15%; width: 100%; }
+.el-x:before { left: 40px; width: 30%; margin-left: -15%; height: 40px; }
+.el-x:after { top: 20px; height: 12px; margin-top: -6px; width: 40px; }
 
-.el-o { width:40px; height:40px; border: 10px solid #080; border-radius: 20px; }
+.el-o { display:block; width:40px; height:40px; border: 10px solid #080; border-radius: 40px; }
+
+.tic-tac-toe .el-x { zoom:3; left:0px; top:1px; }
+.tic-tac-toe .el-o { zoom:2; position:relative; left:20px; top:20px; }

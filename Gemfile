@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rack'
 
 # used in all projects
+gem 'activesupport'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'data_mapper'

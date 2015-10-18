@@ -1,9 +1,6 @@
 // single view-controler
 var IndexPage = {
-  controller: function() {
-
-  },
-
+  controller: function() {},
   view: function() {
     return m('.row', [
       m('.col-1', [
@@ -39,7 +36,16 @@ var IndexPage = {
   }
 }
 
+var LeaderboardPage = {
+  controller: function() {},
+  view: function() {
+
+  }
+}
+
 // mount the app
 m.mount(document.getElementById('app'), IndexPage);
 
-Ttt.reset();
+// init app
+Ttt.init();
+

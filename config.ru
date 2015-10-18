@@ -4,13 +4,15 @@
 
 require 'rubygems'
 require 'bundler'
+
 require 'active_support/inflector'
-require "sinatra/reloader"
+require 'sinatra/reloader'
 
 Bundler.require
 
 set :run, false
 
-require './app.rb'
+# micro meta loader
+[:models, :api, :views].map { |el| require "./app/#{el}" }
 
 run Sinatra::Application
