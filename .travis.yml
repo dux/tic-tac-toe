@@ -1,0 +1,7 @@
+language: ruby
+
+install:
+  - bundle install
+
+script:
+  - rspec spec
