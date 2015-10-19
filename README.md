@@ -1,5 +1,12 @@
 # Tic tac toe demo
 
+## Server side
+
+Sinatra
+
+OR mapper -> DataMaper, cleaner to get it working in Sinatra then AR
+
+
 ## client side of the demo
 
 ### JS
@@ -19,11 +26,6 @@ Simple and extremly efective.
 No usage of any pre-processors as SASS or CoffeeScript or TypeScript. 
 
 That is the reason JS in public/js
-
-
-## OR backend DB mapper
-
-DataMaper, cleaner to get it working in Sinatra then AR
 
 
 ## Install
