@@ -7,7 +7,7 @@ Sinatra
 OR mapper -> DataMaper, cleaner to get it working in Sinatra then AR
 
 
-## client side of the demo
+## Client side
 
 ### JS
 
