@@ -30,7 +30,7 @@ DataMaper, cleaner to get it working in Sinatra then AR
 
     bundle install
 
-    puma -p 3000 (or whatewer that reads config.ru)
+    puma -p 3000 (or whatever that reads config.ru)
 
 
 ## Testing
