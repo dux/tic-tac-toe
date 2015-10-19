@@ -1,8 +1,13 @@
 // single view-controler
 var ViewTemplate = {
 
-  mount: function(t) {
-    m.mount(document.getElementById('app'), { view: ViewTemplate[t] });
+  mount: function(t, opts) {
+    m.mount(document.getElementById('app'), {
+      view:ViewTemplate[t],
+      controller:function() {
+        return opts;
+      }
+    });
   },
 
   index: function() {
@@ -35,17 +40,21 @@ var ViewTemplate = {
     ]);
   },
   
-  leaderboard: function() {
-    return m('h1', 'adasdasdas');
+  leaderboard: function(opts) {
+    return m('div', [
+      m('h4.winner', 'Game recap'),
+      m('.winner', [
+        m('div', opts.name),
+        m('button.winner', { onclick:function() { ViewTemplate.mount('index') } }, 'Play another?')
+      ])
+    ]);
   }
 
 }
 
 // mount the app
 ViewTemplate.mount('index');
-setTimeout(function(){ ViewTemplate.mount('leaderboard'); }, 1000);
-setTimeout(function(){ ViewTemplate.mount('index'); }, 2000);
 
 // init app
 Ttt.init();
-
+Info.ok('Game loaded, vars reseted');

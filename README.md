@@ -49,7 +49,7 @@ https://travis-ci.org/dux/tic-tac-toe
 
 ### javascript
 
-    node-jasmine spec // not implemente
+    node-jasmine spec // not implemented
 
 
 ## Security

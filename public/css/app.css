@@ -78,3 +78,6 @@ table td { width:33%; text-align:center; height:40px; padding:10px;}
 
 .tic-tac-toe .el-x { zoom:3; left:0px; top:1px; }
 .tic-tac-toe .el-o { zoom:2; position:relative; left:20px; top:20px; }
+
+.winner { padding:30px; font-size: 20pt; text-align:center; margin:auto; }
+button.winner {  margin-top:40px; }

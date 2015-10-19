@@ -5,6 +5,7 @@ var Ttt = {
   move_count: 0,
   start_player: 'o',
   current: 'x',
+  winner: undefined,
 
   // curernt user takes a move on a board
   play: function(x,y) {
@@ -58,9 +59,8 @@ var Ttt = {
 
     // do we have a winner? checked after each move
     if (winner = Ttt.we_have_a_winner()) {
-      App['player_'+Ttt.current+'_wins']( App.player_x_wins()+1 );
-      Info.ok('Player "'+App['player_'+Ttt.current]()+'" is a winner');
-      Ttt.init();
+      App['player_'+Ttt.current+'_wins']( App['player_'+Ttt.current+'_wins']()+1 );
+      Ttt.init('Player "'+App['player_'+Ttt.current]()+'" is a winner');
       return;
     }
 
@@ -69,8 +69,7 @@ var Ttt = {
 
     // if board is filled and no winer found, reset board, swich players
     if (Ttt.move_count == 9) {
-      Info.ok('no winner, game resets');
-      Ttt.init();
+      Ttt.init('no winner, draw');
       return;
     }
 
@@ -82,7 +81,7 @@ var Ttt = {
   },
 
   // reset dinamic variables and a board
-  init: function() {
+  init: function(info) {
     var i,j;
 
     // save history
@@ -94,6 +93,7 @@ var Ttt = {
     // reset vars
     this.moves = [[],[],[]];
     this.move_count = 0;
+    this.winner = undefined;
 
     // start player changes every turn
     this.start_player = this.start_player == 'x' ? 'o' : 'x';
@@ -105,6 +105,10 @@ var Ttt = {
       for (j=0;j<3;j++) {
         $('#ttt-'+i+'-'+j).html('');
       }
+    }
+  
+    if (info) {
+      ViewTemplate.mount('leaderboard', { name:info });
     }
   }
 }
